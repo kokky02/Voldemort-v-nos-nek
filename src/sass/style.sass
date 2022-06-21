@@ -1,0 +1,118 @@
+@import "vars"
+@import "fonts"
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+body
+    background-image: url('../img/bgc.jpg')
+    min-height: 200px
+    background-size: cover
+
+header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.6s
+    padding: 40px 0
+    z-index: 100000
+    
+
+
+header ul
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    
+    
+
+    
+
+header ul li 
+    position: relative
+    list-style: none
+    
+ul li:hover a 
+    filter: drop-shadow(0 0 10px var(--clr)) 
+    
+
+.header
+    &__navbar
+        position: center
+        margin: 0 15px
+        text-decoration: none 
+        color: #fff
+        letter-spacing: 2px
+        font-weight: 500px
+        transition: 00.6s
+        font-size: 25px
+        text-align: center
+        &:hover
+            text-decoration: underline
+        
+    
+
+header.sticky 
+    padding: 20px 100px
+    background-color: rgba(255,255,255,.2)
+
+header.sticky ul li a 
+        color: #000
+
+
+
+.main-title
+    color: #fff
+    margin: auto
+    font-size: 60px
+    display: flex
+    text-decoration: none 
+    justify-content: center
+    padding-top: 10%
+    padding-right: auto
+    text-transform: uppercase 
+    text-align: center
+     
+.banner
+    ul li 
+        display: flex
+        list-style: none 
+        justify-content: space-between
+        cursor: pointer
+        color: var(--clr)
+        
+ul li:hover a 
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr))
+     
+        
+        
+        
+        
+
+.banner-list
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 300px
+    
+.college
+    display: flex
+    
+
+
+img 
+    
+    width: 300px
+    height: 300px
+    margin: 100px
+    
+    
+   
