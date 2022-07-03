@@ -7,15 +7,95 @@
     font-family: "Poppins"
 
 body
+    background-image: url('../img/bgc.jpg')
+    min-height: 200px
+    background-size: cover
+
+
+
+    
+
+header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.6s
+    padding: 40px 0
+    z-index: 100000
+    
+
+
+header ul
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+       
+
+header ul li 
+    position: relative
+    list-style: none
+    
+ul li:hover a 
+    filter: drop-shadow(0 0 10px var(--clr)) 
+    
+
+.header
+    &__navbar
+        position: center
+        margin: 0 15px
+        text-decoration: none 
+        color: #fff
+        letter-spacing: 2px
+        font-weight: 500px
+        transition: 00.6s
+        font-size: 25px
+        text-align: center
+        &:hover
+            text-decoration: underline
+
+header.sticky 
+    padding: 20px 100px
+    background-color: rgba(255,255,255,.2)
+
+header.sticky ul li a 
+        color: #000
+
+.title
+    min-height: 200px
+    background-size: cover
+    display: flex
+    padding-top: -20%
+
+.main-title
+    color: #fff
+    margin: auto
+    font-size: 60px
+    display: flex
+    text-decoration: none 
+    justify-content: center
+    padding-top: 8%
+    padding-right: auto
+    text-transform: uppercase 
+    text-align: center
+
+
+    // info o kolejích
+
+section
     display: flex
     justify-content: center
     align-items: center
     flex-wrap: wrap
-    min-height: 100vh
+    padding-top: 200px
 
 .card
     position: relative 
-    width: 300px
+    width: 400px
     height: 300px
     margin: 20px
     border-radius: 20px
@@ -63,7 +143,8 @@ body
 
 .card .circle .logo
     position: relative
-    width: 200px
+    width: 300px
+    height: 300px
     transition: 0.5s
     transition-delay: 0.5s
 
@@ -79,6 +160,7 @@ body
     opacity: 0
     transition: 0.5s
     visibility: hidden
+    
 
 .card:hover .content
     left: 0
