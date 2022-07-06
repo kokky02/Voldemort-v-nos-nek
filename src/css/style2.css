@@ -13,7 +13,7 @@ body {
   background-size: cover;
 }
 
-header {
+nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ header {
   z-index: 100000;
 }
 
-header ul {
+nav ul {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +46,7 @@ header ul {
           align-items: center;
 }
 
-header ul li {
+nav ul li {
   position: relative;
   list-style: none;
 }
@@ -73,12 +73,12 @@ ul li:hover a {
   text-decoration: underline;
 }
 
-header.sticky {
+nav.sticky {
   padding: 20px 100px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-header.sticky ul li a {
+nav.sticky ul li a {
   color: #000;
 }
 
@@ -108,7 +108,7 @@ header.sticky ul li a {
   text-align: center;
 }
 
-section {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,8 +266,7 @@ section {
 
 .content a {
   position: relative;
-  color: #000;
-  background: #CE910A;
+  background: #fff;
   padding: 10px 20px;
   border-radius: 10px;
   margin-top: 10px;
@@ -275,6 +274,12 @@ section {
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
+}
+
+.vice {
+  color: var(--clr);
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card .kolejni_vlajka {
@@ -296,5 +301,69 @@ section {
           transform: translate(-50%, -50%) scale(1);
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+}
+
+@media (max-width: 2181px) {
+  .card .circle .logo {
+    width: 200px;
+    height: 200px;
+  }
+  .card .kolejni_vlajka {
+    height: 400px;
+  }
+  .card:hover {
+    width: 500px;
+  }
+  .card {
+    width: 400px;
+    height: 300px;
+  }
+  .content h2 {
+    font-size: 2em;
+  }
+  .content h3 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1960px) {
+  main {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 65%;
+  }
+}
+
+@media (max-width: 1660px) {
+  main {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 50px;
+    display: block;
+  }
+  .card .circle .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .card:hover .circle .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-top: 50px;
+    display: block;
+  }
 }
 /*# sourceMappingURL=style2.css.map */
