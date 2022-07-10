@@ -15,7 +15,7 @@ body
 // navbar
     
 
-nav
+header
     position: fixed
     top: 0
     left: 0
@@ -29,21 +29,37 @@ nav
     
 
 
-nav ul
+header ul
     position: relative
     display: flex
     justify-content: center
     align-items: center
        
 
-nav ul li 
+header ul li 
     position: relative
     list-style: none
     
 ul li:hover a 
-    filter: drop-shadow(0 0 10px var(--clr)) 
+    filter: drop-shadow(0 0 20px var(--clr)) 
     
+.home
+    font-size: 25px
+    color: #000
+    text-decoration: none
+    font-weight: 500px
+    background-color: #FFF
+    border: none
+    border-radius: 50px
+    cursor: pointer
+    transition: all 0.3s ease 0s
+    padding: 9px 25px
 
+
+
+
+
+    
 .header
     &__navbar
         position: center
@@ -58,11 +74,11 @@ ul li:hover a
         &:hover
             text-decoration: underline
 
-nav.sticky 
+header.sticky 
     padding: 20px 100px
     background-color: rgba(255,255,255,.2)
 
-nav.sticky ul li a 
+header.sticky ul li a 
         color: #000
 
 .title

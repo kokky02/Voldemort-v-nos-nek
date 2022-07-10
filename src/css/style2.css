@@ -13,7 +13,7 @@ body {
   background-size: cover;
 }
 
-nav {
+header {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,7 @@ nav {
   z-index: 100000;
 }
 
-nav ul {
+header ul {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,14 +46,28 @@ nav ul {
           align-items: center;
 }
 
-nav ul li {
+header ul li {
   position: relative;
   list-style: none;
 }
 
 ul li:hover a {
-  -webkit-filter: drop-shadow(0 0 10px var(--clr));
-          filter: drop-shadow(0 0 10px var(--clr));
+  -webkit-filter: drop-shadow(0 0 20px var(--clr));
+          filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.home {
+  font-size: 25px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 500px;
+  background-color: #FFF;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 9px 25px;
 }
 
 .header__navbar {
@@ -73,12 +87,12 @@ ul li:hover a {
   text-decoration: underline;
 }
 
-nav.sticky {
+header.sticky {
   padding: 20px 100px;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-nav.sticky ul li a {
+header.sticky ul li a {
   color: #000;
 }
 

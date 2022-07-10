@@ -8,7 +8,7 @@ body
     background-image: url('../img/gryffindor-bgc.jpg')
     min-height: 200px
     background-size: cover
-
+    
 
 header
     position: fixed
@@ -36,7 +36,7 @@ header ul li
     list-style: none
     
 ul li:hover a 
-    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr))  
+    filter: drop-shadow(0 0 20px var(--clr))
     
 
 .header
@@ -44,7 +44,7 @@ ul li:hover a
         position: center
         margin: 0 15px
         text-decoration: none 
-        color: rgb(100,0,10)
+        color: #fff
         letter-spacing: 2px
         font-weight: 500px
         transition: 00.6s
@@ -53,24 +53,35 @@ ul li:hover a
         &:hover
             text-decoration: underline
 
+.home
+    font-size: 25px
+    color: #fff
+    text-decoration: none
+    font-weight: 500px
+    background-color: var(--clr)
+    border: none
+    border-radius: 50px
+    cursor: pointer
+    transition: all 0.3s ease 0s
+    padding: 9px 25px
+
 header.sticky 
     padding: 20px 100px
-    background-color: rgba(100,0,10,.4)
+    background-color: rgba(255,197, 0,.8) 
 
 header.sticky ul li a 
         color: #000
 
 
 .container
-    margin: 0 200px
-    padding: 600px
-    background-image: url('../img/bgc3.jpg')
+    height: 2000px
+    margin: 0 400px      
+    background-image: url(../img/bgc2.jpg)
 
     h1
-        margin-top: -400px
-        padding: 0
-        color: #000
-        font-size: 60px
+        padding-top: 150px
+        color: #7F0909
+        font-size: 80px
         display: flex
         text-decoration: none 
         justify-content: center
@@ -79,10 +90,16 @@ header.sticky ul li a
         text-align: center
 
     .vlajka
-        margin-left: -500px
-        margin-top: -70px
+        justify-content: start
+        align-items: start
         display: flex
-        width: 50%
-        height: 50%
+        padding-left: 20px
+        width: 7%
+        margin-top: -189px
+        
         justify-content: left
         flex-direction: column
+
+    p
+        font-size: 20px
+        padding: 0 40px        

@@ -7,7 +7,7 @@
 }
 
 body {
-  background-image: url("../img/gryffindor-bgc.jpg");
+  background-image: url("../img/slytherin-bgc.jpg");
   min-height: 200px;
   background-size: cover;
 }
@@ -88,7 +88,7 @@ ul li:hover a {
 
 header.sticky {
   padding: 20px 100px;
-  background-color: rgba(255, 197, 0, 0.8);
+  background-color: rgba(170, 170, 170, 0.8);
 }
 
 header.sticky ul li a {
@@ -103,7 +103,7 @@ header.sticky ul li a {
 
 .container h1 {
   padding-top: 150px;
-  color: #7F0909;
+  color: #0D6217;
   font-size: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,4 +143,4 @@ header.sticky ul li a {
   font-size: 20px;
   padding: 0 40px;
 }
-/*# sourceMappingURL=style-gryffindor.css.map */
+/*# sourceMappingURL=style-slytherin.css.map */
