@@ -138,4 +138,9 @@ header.sticky ul li a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.container p {
+  font-size: 20px;
+  padding: 0 40px;
+}
 /*# sourceMappingURL=style-ravenclaw.css.map */
