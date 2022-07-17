@@ -127,9 +127,10 @@ header.sticky ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 20px;
+  margin-left: 50px;
   width: 7%;
   margin-top: -189px;
+  margin-bottom: 50px;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
@@ -141,6 +142,32 @@ header.sticky ul li a {
 
 .container p {
   font-size: 20px;
-  padding: 0 40px;
+  padding: 0 200px;
+  margin-top: -200px;
+}
+
+@media (max-width: 2181px) {
+  .container {
+    margin: 0 200px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .container p {
+    font-size: 20px;
+    padding: 0 200px;
+    margin-top: -150px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .container {
+    margin: 0 100px;
+  }
+  .container p {
+    font-size: 20px;
+    padding: 0 200px;
+    margin-top: -150px;
+  }
 }
 /*# sourceMappingURL=style-gryffindor.css.map */

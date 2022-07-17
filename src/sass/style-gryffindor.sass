@@ -52,6 +52,7 @@ ul li:hover a
         text-align: center
         &:hover
             text-decoration: underline
+        
 
 .home
     font-size: 25px
@@ -77,7 +78,7 @@ header.sticky ul li a
     height: 2000px
     margin: 0 400px      
     background-image: url(../img/bgc2.jpg)
-
+   
     h1
         padding-top: 150px
         color: #7F0909
@@ -93,13 +94,38 @@ header.sticky ul li a
         justify-content: start
         align-items: start
         display: flex
-        padding-left: 20px
+        margin-left: 50px
         width: 7%
         margin-top: -189px
-        
+        margin-bottom: 50px
         justify-content: left
         flex-direction: column
 
     p
         font-size: 20px
-        padding: 0 40px        
+        padding: 0 200px
+        margin-top: -200px        
+
+
+// responzivita
+@media (max-width: 2181px)
+    .container
+        
+        margin: 0 200px 
+
+@media (max-width: 1920px)
+    .container
+        p
+            font-size: 20px
+            padding: 0 200px
+            margin-top: -150px
+
+@media (max-width: 1700px)
+    .container
+        margin: 0 100px
+        p
+            font-size: 20px
+            padding: 0 200px
+            margin-top: -150px
+
+@media (max-width: 1400px)
