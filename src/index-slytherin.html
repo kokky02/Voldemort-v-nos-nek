@@ -11,16 +11,22 @@
     <title>Zmijozel</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         
-        <ul>
-            <li><a style="--clr:#fff;" class="header__navbar" href="#">Školy</a></li>
-            <li><a style="--clr:#fff;" class="header__navbar" href="#">Hůlky</a></li>
-            <li><a style="--clr:#fff;" class="header__navbar" href="#">Kouzla</a></li>
-            <li><a style="--clr:#fff;" class="header__navbar" href="index.html"> <button style="--clr:#0D6217" class="home">Hlavní strana</button></a></li>
-            <li><a style="--clr:#fff;" class="header__navbar" href="#">Postavy</a></li>
-            <li><a style="--clr:#fff;" class="header__navbar" href="#">Kvíz</a></li>
-            <li><a style="--clr:#fff;" class="header__navbar" href="#">Top 5</a></li>
+        <input type="checkbox" class="menu-btn" id="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span class="menu-icon__line"></span>
+        </label>
+
+
+        <ul class="nav-links">
+            <li class="nav-link"><a style="--clr:#fff;" href="#">Školy</a></li>
+            <li class="nav-link"><a style="--clr:#fff;" href="#">Hůlky</a></li>
+            <li class="nav-link"><a style="--clr:#fff;" href="#">Kouzla</a></li>
+            <li class="nav-link"><a style="--clr:#fff;" href="index.html"> <button class="home" style="--clr:#0D6217">Hlavní strana</button></a></li>
+            <li class="nav-link"><a style="--clr:#fff;" href="#">Postavy</a></li>
+            <li class="nav-link"><a style="--clr:#fff;" href="#">Kvíz</a></li>
+            <li class="nav-link"><a style="--clr:#fff;" href="#">Top 5</a></li>
         </ul>
         
     </header>
@@ -61,11 +67,6 @@
 
 
 
-    <script type="text/javascript">
-        window.addEventListener("scroll", function(){
-            var header = document.querySelector("header");
-            header.classList.toggle("sticky", window.scrollY > 0);
-        })
-    </script>
+    <script src="js/style.js"></script>
 </body>
 </html>

@@ -1,22 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Poppins";
-}
-
-body {
-  background-image: url("../img/ravenclaw-bgc.jpg");
-  min-height: 200px;
-  background-size: cover;
-}
-
-header {
+.main-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,50 +13,124 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  padding: 40px 0;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  padding: 20px 0;
   z-index: 100000;
 }
 
-header ul {
-  position: relative;
+@media (max-width: 900px) {
+  .main-header {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    padding-right: 30px;
+  }
+}
+
+.main-header a {
+  text-decoration: none;
+  color: var(--clr);
+}
+
+.main-header .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header ul li {
-  position: relative;
   list-style: none;
+  font-size: 25px;
 }
 
-ul li:hover a {
+.main-header .nav-links .nav-link a {
+  margin: .2rem;
+  padding: 1rem .5rem;
+}
+
+.main-header .nav-links .nav-link a:hover {
   -webkit-filter: drop-shadow(0 0 20px var(--clr));
           filter: drop-shadow(0 0 20px var(--clr));
 }
 
-.header__navbar {
-  position: center;
-  margin: 0 15px;
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 2px;
-  font-weight: 500px;
-  -webkit-transition: 00.6s;
-  transition: 00.6s;
-  font-size: 25px;
-  text-align: center;
+.main-header .menu-icon {
+  position: relative;
+  padding: 26px 10px;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
 }
 
-.header__navbar:hover {
-  text-decoration: underline;
+.main-header .menu-icon__line {
+  display: block;
+  position: relative;
+  background: #fff;
+  height: 2px;
+  width: 20px;
+  border-radius: 4px;
+  -webkit-transition: background .8s ease;
+  transition: background .8s ease;
+}
+
+.main-header .menu-icon__line::before, .main-header .menu-icon__line::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-transition: background .8s ease;
+  transition: background .8s ease;
+}
+
+.main-header .menu-icon__line::before {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.main-header .menu-icon__line::after {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.main-header .menu-btn {
+  display: none;
+}
+
+.main-header.scrolled {
+  height: 90px;
+  background: rgba(148, 107, 45, 0.8);
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .main-header.scrolled {
+    background: none;
+    color: #fff;
+  }
+}
+
+.main-header.scrolled .menu-icon__line, .main-header.scrolled .menu-icon__line::before, .main-header.scrolled .menu-icon__line::after {
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .main-header.scrolled .menu-icon__line, .main-header.scrolled .menu-icon__line::before, .main-header.scrolled .menu-icon__line::after {
+    background: #fff;
+  }
+}
+
+.main-header.scrolled .nav-link:hover {
+  -webkit-filter: drop-shadow(0 0 20px #000A90);
+          filter: drop-shadow(0 0 20px #000A90);
+}
+
+.main-header.scrolled a {
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .main-header.scrolled a {
+    color: #fff;
+  }
 }
 
 .home {
@@ -84,15 +145,222 @@ ul li:hover a {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   padding: 9px 25px;
+  margin: -9px 0;
 }
 
-header.sticky {
-  padding: 20px 100px;
-  background-color: rgba(148, 107, 45, 0.8);
+@media screen and (max-width: 900px) {
+  .main-header .menu-icon {
+    display: block;
+  }
+  .main-header .menu-icon__line {
+    -webkit-animation: closedMid 0.8s backwards;
+            animation: closedMid 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .main-header .menu-icon__line::before {
+    -webkit-animation: closedTop 0.8s backwards;
+            animation: closedTop 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .main-header .menu-icon__line::after {
+    -webkit-animation: closedBtm 0.8s backwards;
+            animation: closedBtm 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .main-header .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10rem 0;
+    width: 100vw;
+    height: 100vw;
+    font-size: 2rem;
+    color: #fff;
+    background: #272727;
+    -webkit-transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
+    transition: opacity .8s .5s, -webkit-clip-path 1s .5s;
+    transition: opacity .8s .5s, clip-path 1s .5s;
+    transition: opacity .8s .5s, clip-path 1s .5s, -webkit-clip-path 1s .5s;
+    -webkit-clip-path: circle(200px at top right);
+            clip-path: circle(200px at top right);
+  }
+  .main-header .nav-link {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    width: 100%;
+    text-align: center;
+  }
+  .main-header .nav-link a {
+    display: block;
+    padding: 2rem 0;
+  }
+  .menu-btn:checked ~ .nav-links {
+    opacity: 1;
+    -webkit-clip-path: circle(100% at center);
+            clip-path: circle(100% at center);
+  }
+  .menu-btn:checked ~ .nav-links .nav-link {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: opacity 0.4s ease-in-out, -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: opacity 0.4s ease-in-out, -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: opacity 0.4s ease-in-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: opacity 0.4s ease-in-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(1) {
+    -webkit-transition-delay: .7s;
+            transition-delay: .7s;
+  }
+  .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(2) {
+    -webkit-transition-delay: .8s;
+            transition-delay: .8s;
+  }
+  .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3) {
+    -webkit-transition-delay: .9s;
+            transition-delay: .9s;
+  }
+  .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(4) {
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(5) {
+    -webkit-transition-delay: 1.1s;
+            transition-delay: 1.1s;
+  }
+  .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(6) {
+    -webkit-transition-delay: 1.2s;
+            transition-delay: 1.2s;
+  }
+  .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(7) {
+    -webkit-transition-delay: 1.3s;
+            transition-delay: 1.3s;
+  }
+  .menu-btn:checked ~ .menu-icon {
+    border-radius: 50%;
+    -webkit-animation: pulse 1s;
+            animation: pulse 1s;
+  }
+  .menu-btn:checked ~ .menu-icon .menu-icon__line {
+    -webkit-animation: openMid 0.8s forwards;
+            animation: openMid 0.8s forwards;
+  }
+  .menu-btn:checked ~ .menu-icon .menu-icon__line::before {
+    -webkit-animation: openTop 0.8s forwards;
+            animation: openTop 0.8s forwards;
+  }
+  .menu-btn:checked ~ .menu-icon .menu-icon__line::after {
+    -webkit-animation: openBtm 0.8s forwards;
+            animation: openBtm 0.8s forwards;
+  }
 }
 
-header.sticky ul li a {
-  color: #000;
+@-webkit-keyframes openTop {
+  0% {
+    -webkit-transform: translateY(-5px) rotate(0deg);
+            transform: translateY(-5px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(0px) rotate(90deg);
+            transform: translateY(0px) rotate(90deg);
+  }
+}
+
+@keyframes openTop {
+  0% {
+    -webkit-transform: translateY(-5px) rotate(0deg);
+            transform: translateY(-5px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(0px) rotate(90deg);
+            transform: translateY(0px) rotate(90deg);
+  }
+}
+
+@-webkit-keyframes openMid {
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes openMid {
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes openBtm {
+  0% {
+    -webkit-transform: translateY(5px) rotate(0deg);
+            transform: translateY(5px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(0px) rotate(90deg);
+            transform: translateY(0px) rotate(90deg);
+  }
+}
+
+@keyframes openBtm {
+  0% {
+    -webkit-transform: translateY(5px) rotate(0deg);
+            transform: translateY(5px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+            transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(0px) rotate(90deg);
+            transform: translateY(0px) rotate(90deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-image: url("../img/ravenclaw-bgc.jpg");
+  min-height: 200px;
+  background-size: cover;
 }
 
 .container {

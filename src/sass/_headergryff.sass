@@ -82,17 +82,19 @@
 
     &.scrolled
         height: 90px
-        background: rgba(255,255,255,.8)
+        background: rgba(255,197, 0,.8)
         color: #000
         @media (max-width: 900px)
             background: none
             color: #fff
-        .home
-            color: #fff
-            background-color: #000
-
+       
+                
+        
         .nav-link:hover
-            filter: drop-shadow(0 0 20px #000)
+            filter: drop-shadow(0 0 20px #7F0909) 
+           
+
+
 
         .menu-icon
             &__line,
@@ -106,12 +108,14 @@
             color: #000
             @media (max-width: 900px)
                 color: #fff
+     
+        
 .home
     font-size: 25px
-    color: #000
+    color: #fff
     text-decoration: none
     font-weight: 500px
-    background-color: #FFF
+    background-color: var(--clr)
     border: none
     border-radius: 50px
     cursor: pointer

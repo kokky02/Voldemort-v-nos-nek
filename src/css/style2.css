@@ -96,8 +96,8 @@
 }
 
 .main-header.scrolled {
-  height: 110px;
-  background: rgba(255, 255, 255, 0.4);
+  height: 90px;
+  background: rgba(255, 255, 255, 0.8);
   color: #000;
 }
 
@@ -106,6 +106,16 @@
     background: none;
     color: #fff;
   }
+}
+
+.main-header.scrolled .home {
+  color: #fff;
+  background-color: #000;
+}
+
+.main-header.scrolled .nav-link:hover {
+  -webkit-filter: drop-shadow(0 0 20px #000);
+          filter: drop-shadow(0 0 20px #000);
 }
 
 .main-header.scrolled .menu-icon__line, .main-header.scrolled .menu-icon__line::before, .main-header.scrolled .menu-icon__line::after {
