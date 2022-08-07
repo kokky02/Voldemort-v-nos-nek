@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-header {
   position: fixed;
   top: 0;
@@ -428,10 +429,31 @@ header {
           flex-direction: column;
 }
 
-.container p {
+.container .cont {
+  margin-top: -200px;
+}
+
+.container .cont .reditel {
+  -webkit-box-pack: center¨;
+      -ms-flex-pack: center¨;
+          justify-content: center¨;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 200px;
+}
+
+.container .cont .reditel .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+}
+
+.container .cont p {
   font-size: 20px;
   padding: 0 200px;
-  margin-top: -200px;
+  padding-top: 50px;
 }
 
 @media (max-width: 2181px) {
