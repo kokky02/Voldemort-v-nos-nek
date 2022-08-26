@@ -16,17 +16,17 @@ body
     background-size: cover
     
 
-// header
-//     position: fixed
-//     top: 0
-//     left: 0
-//     width: 100%
-//     display: flex
-//     justify-content: center
-//     align-items: center
-//     transition: 0.6s
-//     padding: 40px 0
-//     z-index: 100000
+header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: 0.6s
+    padding: 40px 0
+    z-index: 100000
     
 
 
@@ -58,6 +58,7 @@ body
 //         text-align: center
 //         &:hover
 //             text-decoration: underline
+        
 
 // .home
 //     font-size: 25px
@@ -73,7 +74,7 @@ body
 
 // header.sticky 
 //     padding: 20px 100px
-//     background-color: rgba(170, 170, 170,.8) 
+//     background-color: rgba(255,197, 0,.8) 
 
 // header.sticky ul li a 
 //         color: #000
@@ -83,7 +84,7 @@ body
     height: 2000px
     margin: 0 400px      
     background-image: url(../img/bgc2.jpg)
-
+   
     h1
         padding-top: 150px
         color: $slytherin1
@@ -99,13 +100,53 @@ body
         justify-content: start
         align-items: start
         display: flex
-        padding-left: 20px
+        margin-left: 50px
         width: 7%
         margin-top: -189px
-        
+        margin-bottom: 50px
         justify-content: left
         flex-direction: column
 
-    p
-        font-size: 20px
-        padding: 0 40px        
+
+    .cont
+        margin-top: -200px
+
+        .reditel
+           
+            display: flex       
+            padding-left: 200px
+           
+            .name
+                display: flex
+                padding-left: 10px
+                
+
+
+        p
+            font-size: 20px
+            padding: 0 200px
+            padding-top: 50px
+               
+
+
+// responzivita
+@media (max-width: 2181px)
+    .container
+        
+        margin: 0 200px 
+
+@media (max-width: 1920px)
+    .container
+        p
+            font-size: 20px
+            padding: 0 200px
+            margin-top: -150px
+
+@media (max-width: 1700px)
+    .container
+        margin: 0 100px
+        p
+            font-size: 20px
+            padding: 0 200px
+            margin-top: -150px
+
